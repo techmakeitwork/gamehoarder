@@ -1,7 +1,14 @@
+#Gamehoarder v1.2
 #PS2 and Xbox360 Game Fill/Search App for collectors on the go!
 #The lists will be sorted as alphabetical and by absolute first letter of the title.
 
+#Things todo
+#add title option and insert into correct spot in preferred list
+#work on kivy adaptation for android app
+#
+
 import math
+
 
 def playstation2():
     print("You are looking at PS2 games!")
@@ -136,14 +143,28 @@ xbox360games = [
 "Young Justice Legacy",
 ]
 
-print("GameHoarder 1.1 - You don't have them all yet!")
+print("GameHoarder 1.2 - You don't have them all yet!")
 print("----------------------------------------------")
+
+
 choice = input("Choose your system [P]S2 or [X]box360: ").lower()
 #print(choice)
 if choice == 'p':
-    playstation2()
+    addgame = input("Would you like to [a]dd a new game or [s]earch current games?").lower()
+    if addgame == 'a':
+        newgame = input("Type the new game to add: ")
+        print(newgame)
+    elif addgame == 's': 
+        playstation2()
+            
+    
 elif choice == 'x':
-    xbox360()
+    addgame = input("Would you like to [a]dd a new game or [s]earch current games?").lower()
+    if addgame == 'a':
+        newgame = input("Type the new game to add: ")
+        print(newgame)
+    elif addgame == 's': 
+        xbox360()
 
 
 
@@ -159,3 +180,4 @@ elif choice == 'x':
 
 
     
+
